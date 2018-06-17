@@ -514,6 +514,9 @@ int main (int argc, char *argv[])
   char ***argv_glob;
 # endif
 
+  setvbuf(stdin, NULL, _IONBF, 0);
+  setvbuf(stdout, NULL, _IONBF, 0);
+
   progname[8] = '\0';
   strcpy(progname,"dos2unix");
 
